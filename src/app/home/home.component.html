@@ -1,0 +1,22 @@
+<div class="row">
+    <div class="col-12">
+        <h1>Publicaciones</h1>
+    </div>
+</div>
+<div class="row tarjeta" *ngFor="let item of publicaciones">
+    <div class="col-4">
+        <img src="http://localhost:3000/{{ item.Imagen }}" style="width: 250px;">
+    </div>
+    <div class="col-8">
+        <div class="row">
+            <div class="col-12">
+                <h2>{{ item.Titulo }}</h2>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-12">
+                <p>{{ item.Texto }}</p>
+            </div>
+        </div>
+    </div>
+</div>

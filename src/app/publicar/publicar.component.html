@@ -1,0 +1,34 @@
+<div class="row">
+    <div class="col-12">
+        <h1>Formulario</h1>
+    </div>
+</div>
+<div class="row">
+    <div class="col-6">
+        <button type="button" style="width: 90%;" class="btn btn-sm btn-secondary" (click)="agregarPublicacion()">Agregar</button>
+    </div>
+</div>
+<div class="row" style="padding: 10px;">
+    <div class="col-6">
+        <div class="form-group">
+            <label for="input1">Título Publicación:</label>
+            <input type="text" [(ngModel)]="titulo" ngDefaultControl class="form-control" id="input1" placeholder="Ingresa un título">
+        </div>
+        <div class="form-group">
+            <label for="input2">Texto Publicación:</label>
+            <input type="text" [(ngModel)]="texto" ngDefaultControl class="form-control" id="input2" placeholder="Ingresa un descripción">
+        </div>
+    </div>
+    <div class="col-6">
+        <div class="form-group">
+            <label for="avatar">Avatar:</label>
+            <input type="file" id="avatar" (change)="onFileChange($event)" #fileInput>
+            <button type="button" class="btn btn-sm btn-secondary" (click)="clearFile()">Clear File</button>
+        </div>
+        <div class="form-group">
+            <div class="col-12">
+                <img src="data:image/png;base64,{{ imagenSeleccionada }}" style="width: 600px; height: 530px;">
+            </div>
+        </div>
+    </div>
+</div>
